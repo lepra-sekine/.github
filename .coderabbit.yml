@@ -1,0 +1,8 @@
+language: 'ja-JP'
+reviews:
+    path_filters:
+        - "!**/package-lock.json"
+        - "!**/yarn.lock"
+        - "!**/pnpm-lock.yaml"
+        - "!dist/**"
+        - "!build/**"
