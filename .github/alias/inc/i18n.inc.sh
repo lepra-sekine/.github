@@ -8,7 +8,12 @@
 function i18n() {
     # langは今の所ja, enのみ想定
     local msgkey="${1:-}"
-    local lang="${LANG:-"ja"}"
+    local lang="${LC_ALL:-${LC_MESSAGES:-${LANG:-ja}}}"
+
+    # ja_JP.UTF-8 などのロケール値を ja に正規化する
+    lang="${lang%%.*}"
+    lang="${lang%%_*}"
+    lang="${lang,,}"
 
     # msgkey|lang|message
     local msglist='

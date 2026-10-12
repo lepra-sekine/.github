@@ -18,7 +18,6 @@ then
     # mkdir都度エラーになるので、エラー出力は捨てる
     mkdir -p "$(dirname "$GAI_PATH")" 2> /dev/null
     touch $GAI_PATH
-    printf "export GIT_ALIAS_INSTALLED=\"true\"" > $GAI_PATH
 else
     source $GAI_PATH
 fi
@@ -33,11 +32,13 @@ then
     printf "${ANSI_INFO}$process_msg${ANSI_RES}\n"
 
     # エイリアスを登録
-    git config --global alias.conmd "!.github/alias/conmd.sh"
+    git config --global alias.conmd "!\"${SCRIPT_DIR}/conmd.sh\""
 
     printf "\nexport GIT_ALIAS_INSTALLED=\"true\"" >> ~/.bash_profile
 
     # インストール完了
     process_msg="$(center_text "エイリアスインストール完了！" "48")"
     printf "${ANSI_INFO}$process_msg${ANSI_RES}\n"
+
+    printf "export GIT_ALIAS_INSTALLED=\"true\"" > $GAI_PATH
 fi

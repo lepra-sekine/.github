@@ -212,10 +212,10 @@ function ansi_hexcolor_example() {
     local tgt_titles=""
 
     # 第一引数によって表示対象を変更
-    if [ "${switch}" -eq "text" ]
+    if [[ "${switch}" == "text" ]]
     then
         tgt_titles="38 拡張文字色"
-    elif [ "${switch}" -eq "bg" ]
+    elif [[ "${switch}" == "bg" ]]
     then
         tgt_titles="48 拡張背景色"
     else
