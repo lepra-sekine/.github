@@ -3,7 +3,6 @@
 # このリポジトリで実装した git alias を全件インストールする。
 # ----------------------------------------------------------
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-FROM_RC=${BASH_SOURCE[1]:-0}
 
 # 使用する関数群を読み込み
 source "${SCRIPT_DIR}/inc/text.inc.sh"
