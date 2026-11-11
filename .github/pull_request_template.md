@@ -32,18 +32,105 @@
 <!-- 例： -->
 - テスト実行前に、既に出力されていたログはバックアップを取り、削除しました。
 
-| No. | テスト項目 | 操作 | 期待する動作 | 結果(OK/NG) | スクリーンショット |
-|:--|:--|:--|:--|:--|:--|
-| 1 | 機能Aの実行 | パラメーターに1<=N<100の任意の自然数を指定して機能Aを実行 | 正常に実行されること | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 2 | 機能Aの実行 | パラメーターに`1`を指定して機能Aを実行 | 正常に実行されること | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 3 | 機能Aの実行 | パラメーターに`99`を指定して機能Aを実行 | 正常に実行されること | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 4 | 機能Aの実行 | パラメーターに`0`を指定して機能Aを実行 | 「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 5 | 機能Aの実行 | パラメーターに`100`を指定して機能Aを実行 | 「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 6 | 機能Aの実行 | パラメーターに`0.99`を指定して機能Aを実行 | 「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 7 | 機能Aの実行 | パラメーターに`99.9`を指定して機能Aを実行 | 「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 8 | 機能Aの実行 | パラメーターに`-1`を指定して機能Aを実行 | 「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 9 | 機能Aの実行 | パラメーターに`test`を指定して機能Aを実行 | 「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
-| 10 | 機能Aのログ | No.1~No.9までのテストを実施 | ログに下記のみ記載されていること<br><pre><code>Y-m-d H:i:s FunctionA - insert (1)<br>Y-m-d H:i:s FunctionA - insert (99)</code></pre> | OK | <img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /> |
+
+<table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>テスト項目</th>
+            <th>操作</th>
+            <th>期待する動作</th>
+            <th>結果(OK/NG)</th>
+            <th>スクリーンショット</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに1&lt;=N&lt;100の任意の自然数を指定して機能Aを実行</td>
+            <td>正常に実行されること</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>1</code>を指定して機能Aを実行</td>
+            <td>正常に実行されること</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>99</code>を指定して機能Aを実行</td>
+            <td>正常に実行されること</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>0</code>を指定して機能Aを実行</td>
+            <td>「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>100</code>を指定して機能Aを実行</td>
+            <td>「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>0.99</code>を指定して機能Aを実行</td>
+            <td>「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>99.9</code>を指定して機能Aを実行</td>
+            <td>「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>-1</code>を指定して機能Aを実行</td>
+            <td>「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>機能Aの実行</td>
+            <td>パラメーターに<code>test</code>を指定して機能Aを実行</td>
+            <td>「不正な入力です」とエラーメッセージが表示され、機能Aが実行されないこと</td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>機能Aのログ</td>
+            <td>No.1~No.9までのテストを実施</td>
+            <td>
+                ログに下記のみ記載されていること<br />
+                <pre><code>Y-m-d H:i:s FunctionA - insert (1)
+Y-m-d H:i:s FunctionA - insert (99)</code></pre>
+            </td>
+            <td>OK</td>
+            <td><img src="https://raw.githubusercontent.com/lepra-sekine/.github/refs/heads/main/.github/imgs/sample_window.png" alt="sample window" /></td>
+        </tr>
+    </tbody>
+</table>
 
 ## 🔗 関連Issue
 
